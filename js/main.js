@@ -21,7 +21,7 @@ function draw(){
   pg.stroke(255,255,0);
   pg.ellipse(fixGraphicsX(pmouseX, pg, 150), fixGraphicsY(pmouseY, pg, 75), 30, 30);
   pg.stroke(255);
-  pg.ellipse(fixGraphicsX(mouseX, pg, 150), fixGrahpicsY(mouseY, pg, 75), 60, 60);
+  pg.ellipse(fixGraphicsX(mouseX, pg, 150), fixGraphicsY(mouseY, pg, 75), 60, 60);
 
   //Draw the offscreen buffer to the screen with image()
   image(pg, 150, 75);
