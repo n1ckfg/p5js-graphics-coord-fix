@@ -30,9 +30,9 @@ function draw(){
 }
 
 function fixGraphicsX(_x, _pg, _offset) {
-	return map(_x, 0, _pg.width, 0, _pg.width/2) - (_offset/2);
+	return map(_x, 0, _pg.width, 0, _pg.width/pixelDensity()) - (_offset/pixelDensity());
 }
 
 function fixGraphicsY(_y, _pg, _offset) {
-	return map(_y, 0, _pg.height, 0, _pg.height/2) - (_offset/2);
+	return map(_y, 0, _pg.height, 0, _pg.height/pixelDensity()) - (_offset/pixelDensity());
 }
