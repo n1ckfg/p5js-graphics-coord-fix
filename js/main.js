@@ -19,26 +19,18 @@ function draw(){
   pg.background(51);
   pg.noFill();
   pg.stroke(255,255,0);
-  pg.ellipse(fixPMouseX(pg, 150), fixPMouseY(pg, 75), 30, 30);
+  pg.ellipse(fixGraphicsX(pmouseX, pg, 150), fixGraphicsY(pmouseY, pg, 75), 30, 30);
   pg.stroke(255);
-  pg.ellipse(fixMouseX(pg, 150), fixMouseY(pg, 75), 60, 60);
+  pg.ellipse(fixGraphicsX(mouseX, pg, 150), fixGrahpicsY(mouseY, pg, 75), 60, 60);
 
   //Draw the offscreen buffer to the screen with image()
   image(pg, 150, 75);
 }
 
-function fixMouseX(_pg, offset) {
-	return map(mouseX, 0, _pg.width, 0, _pg.width/2) - (offset/2);
+function fixGraphicsX(_x, _pg, _offset) {
+	return map(_x, 0, _pg.width, 0, _pg.width/2) - (_offset/2);
 }
 
-function fixMouseY(_pg, offset) {
-	return map(mouseY, 0, _pg.height, 0, _pg.height/2) - (offset/2);
-}
-
-function fixPMouseX(_pg, offset) {
-	return map(pmouseX, 0, _pg.width, 0, _pg.width/2) - (offset/2);
-}
-
-function fixPMouseY(_pg, offset) {
-	return map(pmouseY, 0, _pg.height, 0, _pg.height/2) - (offset/2);
+function fixGraphicsY(_y, _pg, _offset) {
+	return map(_y, 0, _pg.height, 0, _pg.height/2) - (_offset/2);
 }
